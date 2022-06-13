@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD7DB5DD-2449-4EBF-8923-6E828DA0128D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YTDSST.Forms</RootNamespace>
+    <AssemblyName>SportsLotterySelfHelpyMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C1C7AC5D7980E01BF51DEE8D6D7513D6B7D842F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>YTDSST_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ytdsst.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.403, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdlib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Mina.NET, Version=2.0.11.0, Culture=neutral, PublicKeyToken=bc4dde96e5154fe5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mina.2.0.11\lib\net40\Mina.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PointingDevice, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdlib\PointingDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.102.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdlib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\3rdlib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Controls\WexinConnectServerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinConnectServerPanel.Designer.cs">
+      <DependentUpon>WexinConnectServerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutingPaperPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutingPaperPanel.Designer.cs">
+      <DependentUpon>WexinCutingPaperPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutPaperFailedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutPaperFailedPanel.Designer.cs">
+      <DependentUpon>WexinCutPaperFailedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutPaperSuccessPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinCutPaperSuccessPanel.Designer.cs">
+      <DependentUpon>WexinCutPaperSuccessPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinGeneratingQRCodePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinGeneratingQRCodePanel.Designer.cs">
+      <DependentUpon>WexinGeneratingQRCodePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinNotSupportedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinNotSupportedPanel.Designer.cs">
+      <DependentUpon>WexinNotSupportedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinWaitScanQRCodePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Controls\WexinWaitScanQRCodePanel.Designer.cs">
+      <DependentUpon>WexinWaitScanQRCodePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMaskLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMaskLayer.Designer.cs">
+      <DependentUpon>FormMaskLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMingMaPrize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMingMaPrize.Designer.cs">
+      <DependentUpon>FormMingMaPrize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuy.Designer.cs">
+      <DependentUpon>FrmPopBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuyAllFailure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuyAllFailure.Designer.cs">
+      <DependentUpon>FrmPopBuyAllFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuyPartialFailure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopBuyPartialFailure.Designer.cs">
+      <DependentUpon>FrmPopBuyPartialFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopCoinReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopCoinReturn.Designer.cs">
+      <DependentUpon>FrmPopCoinReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessAllFailure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessAllFailure.Designer.cs">
+      <DependentUpon>FrmPopPaySuccessAllFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessClickClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessClickClose.Designer.cs">
+      <DependentUpon>FrmPopPaySuccessClickClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessPartialFailure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPaySuccessPartialFailure.Designer.cs">
+      <DependentUpon>FrmPopPaySuccessPartialFailure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPrinting.Designer.cs">
+      <DependentUpon>FrmPopPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopSureMoneyPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopSureMoneyPay.Designer.cs">
+      <DependentUpon>FrmPopSureMoneyPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPrintSucces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPopup\FrmPopPrintSucces.Designer.cs">
+      <DependentUpon>FrmPopPrintSucces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\EnumCutPaperStatus.cs" />
+    <Compile Include="Forms\Pay\EnumPayStatus.cs" />
+    <Compile Include="Forms\Pay\EnumTitleLogoType.cs" />
+    <Compile Include="Forms\Pay\FormLotteryQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\FormLotteryQRCode.Designer.cs">
+      <DependentUpon>FormLotteryQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormShowDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormShowDialog.Designer.cs">
+      <DependentUpon>FormShowDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddLottery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddLottery.Designer.cs">
+      <DependentUpon>FormAddLottery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddLotteryCount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddLotteryCount.Designer.cs">
+      <DependentUpon>FormAddLotteryCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddLotteryDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddLotteryDetailReport.Designer.cs">
+      <DependentUpon>FormAddLotteryDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminMain.Designer.cs">
+      <DependentUpon>FormAdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBuyLotteryMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBuyLotteryMain.Designer.cs">
+      <DependentUpon>FormBuyLotteryMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCashDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCashDeposit.Designer.cs">
+      <DependentUpon>FormCashDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCashDepositReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCashDepositReport.Designer.cs">
+      <DependentUpon>FormCashDepositReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChangePwd.Designer.cs">
+      <DependentUpon>FormChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCleanCashTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCleanCashTime.Designer.cs">
+      <DependentUpon>FormCleanCashTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCopyLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCopyLog.Designer.cs">
+      <DependentUpon>FormCopyLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCutPaperReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCutPaperReport.Designer.cs">
+      <DependentUpon>FormCutPaperReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDrawMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDrawMessage.Designer.cs">
+      <DependentUpon>FormDrawMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmptyCashReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmptyCashReport.Designer.cs">
+      <DependentUpon>FormEmptyCashReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGetCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGetCash.Designer.cs">
+      <DependentUpon>FormGetCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLotteryPrize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLotteryPrize.Designer.cs">
+      <DependentUpon>FormLotteryPrize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMotorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMotorList.Designer.cs">
+      <DependentUpon>FormMotorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNetworkSpeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNetworkSpeed.Designer.cs">
+      <DependentUpon>FormNetworkSpeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPayoutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPayoutReport.Designer.cs">
+      <DependentUpon>FormPayoutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReceCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReceCash.Designer.cs">
+      <DependentUpon>FormReceCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageDialog.Designer.cs">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTerminalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTerminalInfo.Designer.cs">
+      <DependentUpon>FormTerminalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTradeDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTradeDetailReport.Designer.cs">
+      <DependentUpon>FormTradeDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTradeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTradeReport.Designer.cs">
+      <DependentUpon>FormTradeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUnzipToTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUnzipToTerminal.Designer.cs">
+      <DependentUpon>FormUnzipToTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGBind.designer.cs">
+      <DependentUpon>FormSGBind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGChangePassword.designer.cs">
+      <DependentUpon>FormSGChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGSet.designer.cs">
+      <DependentUpon>FormSGSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sg\FormWaitingBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sg\FormWaitingBox.designer.cs">
+      <DependentUpon>FormWaitingBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sys\FormCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sys\FormCommand.Designer.cs">
+      <DependentUpon>FormCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sys\FormConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sys\FormConsole.designer.cs">
+      <DependentUpon>FormConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sys\FormSetSysMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sys\FormSetSysMode.Designer.cs">
+      <DependentUpon>FormSetSysMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\BaseMotor.cs" />
+    <Compile Include="model\lottery.cs" />
+    <Compile Include="model\Order.cs" />
+    <Compile Include="model\OrderDetails.cs" />
+    <Compile Include="model\ServerMotor.cs" />
+    <Compile Include="model\UserMotor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CashClass.cs" />
+    <Compile Include="Service\CoinClass.cs" />
+    <Compile Include="Service\Context\ApplicationContext.cs" />
+    <Compile Include="Service\ControlPanel.cs" />
+    <Compile Include="Service\DbDuiJiangOperate.cs" />
+    <Compile Include="Service\Exceptions\ServiceException.cs" />
+    <Compile Include="Service\HostLoader.cs" />
+    <Compile Include="Service\JCMBillAcceptorClass.cs" />
+    <Compile Include="Service\Context\MachineContext.cs" />
+    <Compile Include="Service\MotorController.cs" />
+    <Compile Include="Service\MotorOperate.cs" />
+    <Compile Include="Service\Context\UserContext.cs" />
+    <Compile Include="Forms\Sg\FormSGFactoryTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sg\FormSGFactoryTest.designer.cs">
+      <DependentUpon>FormSGFactoryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Sg\BarcodeCheckDLL.cs" />
+    <Compile Include="Service\Sg\ResultMessage.cs" />
+    <Compile Include="Service\Sg\SGBentDll.cs" />
+    <Compile Include="Service\Wexin\Data\C000Content.cs" />
+    <Compile Include="Service\Wexin\Data\C001Content.cs" />
+    <Compile Include="Service\Wexin\Data\C002Content.cs" />
+    <Compile Include="Service\Wexin\Data\C003Content.cs" />
+    <Compile Include="Service\Wexin\Data\C004Content.cs" />
+    <Compile Include="Service\Wexin\Data\C005Content.cs" />
+    <Compile Include="Service\Wexin\Data\C006Content.cs" />
+    <Compile Include="Service\Wexin\Data\C007Content.cs" />
+    <Compile Include="Service\Wexin\Data\C008Content.cs" />
+    <Compile Include="Service\Wexin\Data\C009Content.cs" />
+    <Compile Include="Service\Wexin\Data\Content.cs" />
+    <Compile Include="Service\Wexin\Data\RemoteData.cs" />
+    <Compile Include="Service\Wexin\Mina\HandleFactory.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C001_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C002_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C003_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C004_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C005_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C006_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C007_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C008_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\Handler\C009_Handle.cs" />
+    <Compile Include="Service\Wexin\Mina\IProtocolHandler.cs" />
+    <Compile Include="Service\Wexin\Mina\WexinCodecFactory.cs" />
+    <Compile Include="Service\Wexin\Mina\WexinDecoder.cs" />
+    <Compile Include="Service\Wexin\Mina\WexinEncoder.cs" />
+    <Compile Include="Service\Wexin\Mina\WexinHandle.cs" />
+    <Compile Include="Service\Wexin\QRData.cs" />
+    <Compile Include="Service\Wexin\WexinPacket.cs" />
+    <Compile Include="Service\Wexin\WexinService.cs" />
+    <Compile Include="Service\Wexin\WeXinSocketClient.cs" />
+    <Compile Include="Service\PrizePunch.cs" />
+    <Compile Include="Service\DbOperate.cs" />
+    <Compile Include="Temp\InitUtils.cs" />
+    <Compile Include="Temp\ModelDialogHolder.cs" />
+    <EmbeddedResource Include="Forms\Controls\WexinConnectServerPanel.resx">
+      <DependentUpon>WexinConnectServerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinCutingPaperPanel.resx">
+      <DependentUpon>WexinCutingPaperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinCutPaperFailedPanel.resx">
+      <DependentUpon>WexinCutPaperFailedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinCutPaperSuccessPanel.resx">
+      <DependentUpon>WexinCutPaperSuccessPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinGeneratingQRCodePanel.resx">
+      <DependentUpon>WexinGeneratingQRCodePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinNotSupportedPanel.resx">
+      <DependentUpon>WexinNotSupportedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Controls\WexinWaitScanQRCodePanel.resx">
+      <DependentUpon>WexinWaitScanQRCodePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDrawMessage.resx">
+      <DependentUpon>FormDrawMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMaskLayer.resx">
+      <DependentUpon>FormMaskLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddLottery.resx">
+      <DependentUpon>FormAddLottery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddLotteryCount.resx">
+      <DependentUpon>FormAddLotteryCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddLotteryDetailReport.resx">
+      <DependentUpon>FormAddLotteryDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminMain.resx">
+      <DependentUpon>FormAdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBuyLotteryMain.resx">
+      <DependentUpon>FormBuyLotteryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCashDeposit.resx">
+      <DependentUpon>FormCashDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCashDepositReport.resx">
+      <DependentUpon>FormCashDepositReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormChangePwd.resx">
+      <DependentUpon>FormChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCleanCashTime.resx">
+      <DependentUpon>FormCleanCashTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCopyLog.resx">
+      <DependentUpon>FormCopyLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCutPaperReport.resx">
+      <DependentUpon>FormCutPaperReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmptyCashReport.resx">
+      <DependentUpon>FormEmptyCashReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGetCash.resx">
+      <DependentUpon>FormGetCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLotteryPrize.resx">
+      <DependentUpon>FormLotteryPrize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMingMaPrize.resx">
+      <DependentUpon>FormMingMaPrize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopBuy.resx">
+      <DependentUpon>FrmPopBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopBuyAllFailure.resx">
+      <DependentUpon>FrmPopBuyAllFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopBuyPartialFailure.resx">
+      <DependentUpon>FrmPopBuyPartialFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopCoinReturn.resx">
+      <DependentUpon>FrmPopCoinReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopPaySuccessAllFailure.resx">
+      <DependentUpon>FrmPopPaySuccessAllFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopPaySuccessClickClose.resx">
+      <DependentUpon>FrmPopPaySuccessClickClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopPaySuccessPartialFailure.resx">
+      <DependentUpon>FrmPopPaySuccessPartialFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopPrinting.resx">
+      <DependentUpon>FrmPopPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopSureMoneyPay.resx">
+      <DependentUpon>FrmPopSureMoneyPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPopup\FrmPopPrintSucces.resx">
+      <DependentUpon>FrmPopPrintSucces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\FormLotteryQRCode.resx">
+      <DependentUpon>FormLotteryQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMotorList.resx">
+      <DependentUpon>FormMotorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNetworkSpeed.resx">
+      <DependentUpon>FormNetworkSpeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPayoutReport.resx">
+      <DependentUpon>FormPayoutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReceCash.resx">
+      <DependentUpon>FormReceCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageDialog.resx">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTerminalInfo.resx">
+      <DependentUpon>FormTerminalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTradeDetailReport.resx">
+      <DependentUpon>FormTradeDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTradeReport.resx">
+      <DependentUpon>FormTradeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUnzipToTerminal.resx">
+      <DependentUpon>FormUnzipToTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sg\FormSGBind.resx">
+      <DependentUpon>FormSGBind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sg\FormSGChangePassword.resx">
+      <DependentUpon>FormSGChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sg\FormSGSet.resx">
+      <DependentUpon>FormSGSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sg\FormWaitingBox.resx">
+      <DependentUpon>FormWaitingBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sys\FormCommand.resx">
+      <DependentUpon>FormCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sys\FormConsole.resx">
+      <DependentUpon>FormConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sys\FormSetSysMode.resx">
+      <DependentUpon>FormSetSysMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sg\FormSGFactoryTest.resx">
+      <DependentUpon>FormSGFactoryTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="YTDSST_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\1.png" />
+    <Content Include="images\10.png" />
+    <Content Include="images\10_8.png" />
+    <Content Include="images\10_9.png" />
+    <Content Include="images\10_no8.png" />
+    <Content Include="images\10_no9.png" />
+    <Content Include="images\11.png" />
+    <Content Include="images\11_8.png" />
+    <Content Include="images\11_9.png" />
+    <Content Include="images\11_no8.png" />
+    <Content Include="images\11_no9.png" />
+    <Content Include="images\12.png" />
+    <Content Include="images\12_8.png" />
+    <Content Include="images\12_9.png" />
+    <Content Include="images\12_no8.png" />
+    <Content Include="images\12_no9.png" />
+    <Content Include="images\13.png" />
+    <Content Include="images\13_8.png" />
+    <Content Include="images\13_9.png" />
+    <Content Include="images\13_no8.png" />
+    <Content Include="images\13_no9.png" />
+    <Content Include="images\14.png" />
+    <Content Include="images\14_8.png" />
+    <Content Include="images\14_9.png" />
+    <Content Include="images\14_no8.png" />
+    <Content Include="images\14_no9.png" />
+    <Content Include="images\15.png" />
+    <Content Include="images\15_8.png" />
+    <Content Include="images\15_9.png" />
+    <Content Include="images\15_no8.png" />
+    <Content Include="images\15_no9.png" />
+    <Content Include="images\16.png" />
+    <Content Include="images\16_8.png" />
+    <Content Include="images\16_9.png" />
+    <Content Include="images\16_no8.png" />
+    <Content Include="images\16_no9.png" />
+    <Content Include="images\17.png" />
+    <Content Include="images\17_8.png" />
+    <Content Include="images\17_9.png" />
+    <Content Include="images\17_no8.png" />
+    <Content Include="images\17_no9.png" />
+    <Content Include="images\18.png" />
+    <Content Include="images\18_8.png" />
+    <Content Include="images\18_9.png" />
+    <Content Include="images\18_no8.png" />
+    <Content Include="images\18_no9.png" />
+    <Content Include="images\19.png" />
+    <Content Include="images\19_8.png" />
+    <Content Include="images\19_9.png" />
+    <Content Include="images\19_no8.png" />
+    <Content Include="images\19_no9.png" />
+    <Content Include="images\1_8.png" />
+    <Content Include="images\1_9.png" />
+    <Content Include="images\1_no8.png" />
+    <Content Include="images\1_no9.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\20.png" />
+    <Content Include="images\20_8.png" />
+    <Content Include="images\20_9.png" />
+    <Content Include="images\20_no8.png" />
+    <Content Include="images\20_no9.png" />
+    <Content Include="images\21.png" />
+    <Content Include="images\21_8.png" />
+    <Content Include="images\21_9.png" />
+    <Content Include="images\21_no8.png" />
+    <Content Include="images\21_no9.png" />
+    <Content Include="images\2_8.png" />
+    <Content Include="images\2_9.png" />
+    <Content Include="images\2_no8.png" />
+    <Content Include="images\2_no9.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\3_8.png" />
+    <Content Include="images\3_9.png" />
+    <Content Include="images\3_no8.png" />
+    <Content Include="images\3_no9.png" />
+    <Content Include="images\4.png" />
+    <Content Include="images\4_8.png" />
+    <Content Include="images\4_9.png" />
+    <Content Include="images\4_no8.png" />
+    <Content Include="images\4_no9.png" />
+    <Content Include="images\5.png" />
+    <Content Include="images\5_8.png" />
+    <Content Include="images\5_9.png" />
+    <Content Include="images\5_no8.png" />
+    <Content Include="images\5_no9.png" />
+    <Content Include="images\6.png" />
+    <Content Include="images\6_8.png" />
+    <Content Include="images\6_9.png" />
+    <Content Include="images\6_no8.png" />
+    <Content Include="images\6_no9.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\7_8.png" />
+    <Content Include="images\7_9.png" />
+    <Content Include="images\7_no8.png" />
+    <Content Include="images\7_no9.png" />
+    <Content Include="images\8.png" />
+    <Content Include="images\8_8.png" />
+    <Content Include="images\8_9.png" />
+    <Content Include="images\8_no8.png" />
+    <Content Include="images\8_no9.png" />
+    <Content Include="images\9.png" />
+    <Content Include="images\9_8.png" />
+    <Content Include="images\9_9.png" />
+    <Content Include="images\9_no8.png" />
+    <Content Include="images\9_no9.png" />
+    <None Include="Resources\btn_close1.png" />
+    <None Include="Resources\btn_close2.png" />
+    <None Include="Resources\tuibi_up.png" />
+    <None Include="Resources\alipay-off.png" />
+    <None Include="Resources\alipay-on.png" />
+    <None Include="Resources\alipay_liucheng.jpg" />
+    <Content Include="ytdsst.ico" />
+    <None Include="Resources\点击购买.png" />
+    <None Include="Resources\duijiang_up.png" />
+    <None Include="Resources\jiesuan_up.png" />
+    <None Include="Resources\duijiang.png" />
+    <None Include="Resources\quedinggoumai.png" />
+    <None Include="images\pay_process.jpg" />
+    <None Include="images\background\moto8_weixin.png" />
+    <Content Include="log4net.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\weixin_liucheng.jpg" />
+    <None Include="Resources\xianjin_liucheng.jpg" />
+    <None Include="Resources\moto8_768x1366x24_1.jpg" />
+    <None Include="Resources\jiesuan_down.png" />
+    <None Include="Resources\qingkong_down.png" />
+    <None Include="Resources\qingkong_up.png" />
+    <None Include="Resources\weixin-off.png" />
+    <None Include="Resources\xianjin-on.png" />
+    <None Include="Resources\标题绿色笑脸Logo.png" />
+    <None Include="Resources\标题绿色勾logo.png" />
+    <None Include="Resources\标题警告Logo.png" />
+    <None Include="Resources\标题红色哭脸Logo.png" />
+    <None Include="Resources\绿色对勾.png" />
+    <None Include="Resources\彩票出票占位图.png" />
+    <None Include="Resources\微信Logo.png" />
+    <None Include="Resources\关闭窗口.png" />
+    <None Include="Resources\二维码占位符.jpg" />
+    <None Include="Resources\支付弹出框背景.png" />
+    <None Include="Resources\手机扫码提示图.jpg" />
+    <None Include="Resources\duijiang.bmp" />
+    <None Include="images\background\login_768x552x24.jpg" />
+    <None Include="images\background\btn_login_123x41x8.png" />
+    <None Include="images\background\btn_cancel_123x41x8.png" />
+    <None Include="images\background\moto8_768x1366x24.jpg" />
+    <None Include="images\lottery\2_no8.png" />
+    <None Include="images\background\00001.gif" />
+    <None Include="images\background\00002.gif" />
+    <None Include="images\background\00018[133x56x8BPP].png" />
+    <None Include="images\background\00013[133x56x8BPP].png" />
+    <None Include="images\background\00009[768x554x8BPP].png" />
+    <None Include="images\background\00010[768x630x8BPP].png" />
+    <None Include="images\background\jiesuan1_133x56.png" />
+    <None Include="images\background\duijiang_133x56.png" />
+    <None Include="images\background\duijiang1_133x56.png" />
+    <None Include="images\background\duijiang_disable.png" />
+    <None Include="images\background\00015[133x56x8BPP].png" />
+    <None Include="images\background\00016[133x56x8BPP].png" />
+    <None Include="images\background\jiesuan_disable.png" />
+    <None Include="images\background\jisuan_133x56.png" />
+    <None Include="images\background\key.png" />
+    <None Include="images\background\wifi_2.png" />
+    <None Include="images\background\wifi_3.png" />
+    <None Include="images\background\wifi_4.png" />
+    <None Include="images\background\wifi_5.png" />
+    <None Include="images\background\wifi_1.png" />
+    <None Include="images\background\wifi_0.png" />
+    <None Include="images\background\btn_up.png" />
+    <None Include="images\background\btn_down.png" />
+    <Content Include="images\ScanPrize.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

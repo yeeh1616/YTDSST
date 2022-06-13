@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net-net-1.0"    />
+  </configSections>
+
+  <log4net>
+    <root>
+      <level value="DEBUG"/>
+      <!--文件形式记录日志-->
+      <appender-ref ref="RollingLogFileAppender"/>
+    </root>
+    
+    <!--定义输出到文件中-->
+    <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <!--定义文件存放位置-->
+      <file value="logs\\"/>
+      <appendToFile value="true"/>
+      <rollingStyle value="Date"/>
+      <datePattern value="yyyy\\yyyyMMdd.\tx\t"/>
+      <staticLogFileName value="false"/>
+      <param name="MaxSizeRollBackups" value="1000"/>
+
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="[%date] [Thread:%thread][%-5level][%logger][property:%property{NDC}] -  %message%newline"/>
+      </layout>
+    </appender>
+  </log4net>
+</configuration>

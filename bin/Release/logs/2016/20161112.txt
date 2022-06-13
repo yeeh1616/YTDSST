@@ -1,0 +1,30 @@
+[2016-11-12 00:08:31,753] [Thread:10][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:08:41,862] [Thread:10][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  Begin To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:08:41,874] [Thread:10][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  End To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:09:39,093] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:13:13,940] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:15:49,838] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:15:59,966] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:16:10,042] [Thread:9][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  Begin To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:16:10,057] [Thread:9][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  End To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:20:26,212] [Thread:6][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:20:36,388] [Thread:6][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  Begin To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:20:36,402] [Thread:6][DEBUG][YTDSST.Service.Wexin.Mina.WexinEncoder][property:(null)] -  End To Encode Packet :WexinPacket[ProtocolId=C004,MachineCode=r091312011110,Content={"terminal_code":null,"order_id":null},Signature=22583D561F65F58362C5A4696BBF8EBE]
+[2016-11-12 00:24:25,774] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257
+[2016-11-12 00:25:01,237] [Thread:9][INFO ][YTDSST.Service.Wexin.WeXinSocketClient][property:(null)] -  发送数据失败
+Mina.Core.Write.WriteToClosedSessionException: 发生 I/O 错误。
+   在 YTDSST.Service.Wexin.WeXinSocketClient.WriteSocketData(RemoteData remoteData) 位置 D:\Intradak\client\trunk\YTDSST\YTDSST\Service\Wexin\WeXinSocketClient.cs:行号 257

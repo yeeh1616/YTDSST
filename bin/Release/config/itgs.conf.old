@@ -1,0 +1,16 @@
+{
+	"TestSystem":	0,
+	"Demo":	0,
+	"NetworkTimeout":	45,
+	"TransactionTimeout":	45,
+	"ProvinceId":	31,
+	"ConfirmAMT":	500,
+	"BindStatus":	1,
+	"Sn":	"z091312011146",
+	"TerminalNo":	"3151101001198",
+	"ShopNo":	"3151101001",
+	"ShopAddress":	"乐透不止，畅活由你",
+	"LogonNo":	"a656e7b4c54331cba95fca3903fd0b88",
+	"LogonPassword":	"503e2c647dc9b66efe1bd96a0534dd6d"
+}
+===$000000369-9f32b37e65be082812c17d598242ec51$
